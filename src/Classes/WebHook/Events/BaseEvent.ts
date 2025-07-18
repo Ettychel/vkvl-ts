@@ -1,6 +1,6 @@
 import { ConvertSnakeToCamel } from "../../../Util/SnakeToCamel";
-import type { IChannel } from "../Types/EntityTypes/IChannel";
-import type { IOwner } from "../Types/EntityTypes/IOwner";
+import type { IChannel } from "../Types";
+import type { IOwner } from "../Types";
 import type { IBaseEvent } from "../Types/EventTypes/IBaseEvent";
 
 export class BaseEvent implements ConvertSnakeToCamel<IBaseEvent> {
