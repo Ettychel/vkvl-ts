@@ -1,9 +1,6 @@
-import type { IChannel } from "../EntityTypes/IChannel";
 import type { IDemand } from "../EntityTypes/IDemand";
-import type { IOwner } from "../EntityTypes/IOwner";
+import type { IBaseEvent } from "./IBaseEvent";
 
-export interface IChannelPointsRewardDemandCreateEvent {
-  channel: IChannel;
-  owner: IOwner;
-  demand: IDemand;
+export interface IChannelPointsRewardDemandCreateEvent extends IBaseEvent {
+  readonly demand: IDemand;
 }

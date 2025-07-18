@@ -1,9 +1,6 @@
-import type { IChannel } from "../EntityTypes/IChannel";
 import type { IGiftSubscription } from "../EntityTypes/IGiftSubscription";
-import type { IOwner } from "../EntityTypes/IOwner";
+import type { IBaseEvent } from "./IBaseEvent";
 
-export interface IChannelSubscriptionGiftGiveEvent {
-  channel: IChannel;
-  owner: IOwner;
-  gift_subscription: IGiftSubscription;
+export interface IChannelSubscriptionGiftGiveEvent extends IBaseEvent {
+  readonly gift_subscription: IGiftSubscription;
 }

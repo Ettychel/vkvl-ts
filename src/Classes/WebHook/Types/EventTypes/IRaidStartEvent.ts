@@ -1,9 +1,6 @@
-import type { IChannel } from "../EntityTypes/IChannel";
-import type { IOwner } from "../EntityTypes/IOwner";
 import type { IRaid } from "../EntityTypes/IRaid";
+import type { IBaseEvent } from "./IBaseEvent";
 
-export interface IRaidStartEvent {
-  channel: IChannel;
-  owner: IOwner;
-  raid: IRaid;
+export interface IRaidStartEvent extends IBaseEvent {
+  readonly raid: IRaid;
 }

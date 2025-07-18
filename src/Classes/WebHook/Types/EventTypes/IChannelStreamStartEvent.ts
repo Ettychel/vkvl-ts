@@ -1,9 +1,6 @@
-import type { IChannel } from "../EntityTypes/IChannel";
-import type { IOwner } from "../EntityTypes/IOwner";
 import type { IStream } from "../EntityTypes/IStream";
+import type { IBaseEvent } from "./IBaseEvent";
 
-export interface IChannelStreamStartEvent {
-  channel: IChannel;
-  owner: IOwner;
-  stream: IStream;
+export interface IChannelStreamStartEvent extends IBaseEvent {
+  readonly stream: IStream;
 }

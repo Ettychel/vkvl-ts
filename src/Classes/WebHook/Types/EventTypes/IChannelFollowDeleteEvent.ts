@@ -1,9 +1,6 @@
-import type { IChannel } from "../EntityTypes/IChannel";
 import type { IFollow } from "../EntityTypes/IFollow";
-import type { IOwner } from "../EntityTypes/IOwner";
+import type { IBaseEvent } from "./IBaseEvent";
 
-export interface IChannelFollowDeleteEvent {
-  channel: IChannel;
-  owner: IOwner;
-  follow: IFollow;
+export interface IChannelFollowDeleteEvent extends IBaseEvent {
+  readonly follow: IFollow;
 }
