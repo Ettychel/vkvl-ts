@@ -14,29 +14,29 @@ export type ConvertSnakeToCamel<T> = T extends object
   : T;
 
 export function snakeToCamel<T>(data: T): ConvertSnakeToCamel<T> {
-  // Обработка примитивов и null
+// Обработка примитивов и null
   if (typeof data !== "object" || data === null) {
     return data as any;
   }
 
   // Обработка массивов
   if (Array.isArray(data)) {
-    var newArray = [];
-    for (var i = 0; i < data.length; i++) {
+    const newArray = [];
+    for (let i = 0; i < data.length; i++) {
       newArray[i] = snakeToCamel(data[i]);
     }
     return newArray as any;
   }
 
   // Обработка объектов
-  var newObj: any = {};
-  var keys = Object.keys(data);
-  for (var i = 0; i < keys.length; i++) {
-    var originalKey = keys[i];
-    var value = (data as any)[originalKey];
+  const newObj: any = {};
+  const keys = Object.keys(data);
+  for (let i = 0; i < keys.length; i++) {
+    const originalKey = keys[i];
+    const value = (data as any)[originalKey];
 
     // Преобразование ключа
-    var camelKey = originalKey.replace(/_([a-z])/g, function (_, letter) {
+    const camelKey = originalKey.replace(/_([a-z])/g, function (_, letter) {
       return letter.toUpperCase();
     });
 
