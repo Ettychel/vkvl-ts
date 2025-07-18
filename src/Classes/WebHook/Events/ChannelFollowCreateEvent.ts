@@ -1,6 +1,6 @@
 import { ConvertSnakeToCamel, snakeToCamel } from "../../../Util/SnakeToCamel";
-import type { IFollow } from "../Types/EntityTypes/IFollow";
-import type { IChannelFollowCreateEvent } from "../Types/EventTypes/IChannelFollowCreateEvent";
+import type { IFollow } from "../Types";
+import type { IChannelFollowCreateEvent } from "../Types";
 import { BaseEvent } from "./BaseEvent";
 
 export class ChannelFollowCreateEvent
